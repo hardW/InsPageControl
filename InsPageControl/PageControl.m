@@ -80,6 +80,10 @@ typedef NS_ENUM(NSUInteger, Direction) {
     [_scrollView setHidden:(_numberOfPages <= 1 && hidesForSinglePage)];
 }
 
+- (void)setCurrentPage:(int)currentPage {
+    [self setCurrentPage:currentPage animated:YES];
+}
+
 - (void)setCurrentPage:(int)currentPage animated: (BOOL)animatd {
     
     if (currentPage == _currentPage) {
